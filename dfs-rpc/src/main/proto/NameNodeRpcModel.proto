@@ -1,0 +1,116 @@
+syntax = "proto3";
+
+package com.westboy.namenode.rpc;
+
+option java_multiple_files = true;
+option java_package = "com.westboy.namenode.rpc.model";
+option java_outer_classname = "NameNodeRpcModel";
+
+message RegisterRequest {
+  string datanodeInfo = 1;
+}
+
+message RegisterResponse {
+  int32 status = 1;
+}
+
+message HeartbeatRequest {
+  string datanodeInfo = 1;
+}
+
+message HeartbeatResponse {
+  int32 status = 1;
+  string commands = 2;
+}
+
+message MkdirRequest {
+  string path = 1;
+}
+
+message MkdirResponse {
+  int32 status = 1;
+}
+
+message ShutdownRequest{
+  int32 code = 1;
+}
+message ShutdownResponse{
+  int32 status = 1;
+}
+
+message FetchEditlogRequest{
+  int64 syncTxid = 2;
+}
+
+message FetchEditlogResponse{
+  int32 status = 1;
+  string editsLog = 2;
+}
+
+message UpdateCheckpointTxidRequest{
+  int64 txid = 1;
+}
+
+message UpdateCheckpointTxidResponse{
+  int32 status = 1;
+}
+
+message CreateFileRequest{
+  string filename = 1;
+}
+message CreateFileResponse{
+  int32 status = 1;
+}
+
+message AllocateDataNodesRequest{
+  string fileInfo = 1;
+}
+
+message AllocateDataNodesResponse{
+  int32 status = 1;
+  string datanodeInfo = 2;
+}
+
+message ReallocateDataNodeRequest{
+  string fileInfo = 1;
+  string excludedDatanodeInfo = 2;
+}
+message ReallocateDataNodeResponse{
+  int32 status = 1;
+  string datanodeInfo = 2;
+}
+
+message ReportStorageInfoRequest{
+  string datanodeInfo = 1;
+  string storageInfo = 2;
+}
+
+message ReportStorageInfoResponse{
+  int32 status = 1;
+}
+
+message ReportFileInfoRequest{
+  string datanodeInfo = 1;
+  string fileInfo = 4;
+}
+
+message ReportFileInfoResponse{
+  int32 status = 1;
+}
+
+message ChooseDataNodeRequest{
+  string filename = 1;
+  string excludedDatanodeInfo = 2;
+}
+
+message ChooseDataNodeResponse{
+  int32 status = 1;
+  string datanodeInfo = 2;
+}
+
+message RebalanceRequest{
+}
+
+message RebalanceResponse{
+  int32 status = 1;
+}
