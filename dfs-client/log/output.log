@@ -1,9 +1,0 @@
-2021-04-22 10:03:03.810 [main] INFO  com.westboy.client.FileSystemImpl - 准备上传文件大小为 17449 字节
-2021-04-22 10:03:03.818 [main] INFO  com.westboy.client.FileSystemImpl - 从磁盘中读取 17449 字节数据到缓存
-2021-04-22 10:03:03.818 [main] INFO  com.westboy.client.FileSystemImpl - 发送创建文件目录请求，filename=/image/59922f5866.jpg
-2021-04-22 10:03:04.326 [main] INFO  com.westboy.client.FileSystemImpl - 接收到创建文件目录响应，status=1
-2021-04-22 10:03:04.327 [main] INFO  com.westboy.client.FileSystemImpl - 在文件目录树中创建该文件成功，文件名称：/image/59922f5866.jpg
-2021-04-22 10:03:04.328 [main] INFO  com.westboy.client.FileSystemImpl - 发送申请分配 DataNode 节点请求，fileInfo=FileInfo(filename=/image/59922f5866.jpg, fileLength=17449)
-2021-04-22 10:03:04.369 [main] INFO  com.westboy.client.FileSystemImpl - 接收到申请分配 DataNode 节点响应 fileInfo=FileInfo(filename=/image/59922f5866.jpg, fileLength=17449)，response=[{"latestHeartbeatTime":1619056963831,"ip":"127.0.0.1","hostname":"datanode-2","port":9302,"storedDataSize":17449}]
-2021-04-22 10:03:05.402 [main] INFO  com.westboy.client.FileSystemImpl - 发送重新申请分配 DataNode 节点请求，fileInfo=FileInfo(filename=/image/59922f5866.jpg, fileLength=17449)
-2021-04-22 10:03:05.418 [main] INFO  com.westboy.client.FileSystemImpl - 接收到重新申请分配 DataNode 节点响应 fileInfo=FileInfo(filename=/image/59922f5866.jpg, fileLength=17449)，response={"port":0}
